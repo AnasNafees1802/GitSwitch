@@ -1,0 +1,50 @@
+{
+  "name": "gitswitch",
+  "version": "1.0.0",
+  "description": "One laptop. Many Git accounts. Zero confusion.",
+  "main": "dist/main/main/index.js",
+  "author": "GitSwitch Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev:renderer\" \"npm run dev:electron\"",
+    "dev:renderer": "vite",
+    "dev:main": "tsc -p tsconfig.main.json --watch",
+    "dev:electron": "npm run build:main && electron .",
+    "build": "npm run build:main & npm run build:renderer",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:renderer": "vite build",
+    "start": "npm run build && electron .",
+    "package:win": "npm run build && electron-builder --win",
+    "package:mac": "npm run build && electron-builder --mac",
+    "package:linux": "npm run build && electron-builder --linux",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "keytar": "^7.9.0",
+    "simple-git": "^3.22.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.56.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "build": {
+    "extends": "electron-builder.yml"
+  }
+}

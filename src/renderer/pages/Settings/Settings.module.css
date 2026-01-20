@@ -1,0 +1,136 @@
+/**
+ * Settings Page Styles
+ */
+
+.settings {
+    max-width: 700px;
+    animation: slideUp var(--transition-normal);
+}
+
+.header {
+    margin-bottom: var(--space-xl);
+}
+
+.header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.section {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.sectionTitle {
+    font-size: var(--font-md);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    color: var(--text-primary);
+}
+
+.settingItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-secondary);
+}
+
+.settingItem:last-child {
+    border-bottom: none;
+}
+
+.settingInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.settingLabel {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.settingDescription {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-full);
+    transition: var(--transition-fast);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--text-muted);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.toggle input:checked+.slider {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.toggle input:checked+.slider:before {
+    background-color: white;
+    transform: translateX(20px);
+}
+
+.toggle input:disabled+.slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.about {
+    color: var(--text-secondary);
+}
+
+.about p {
+    margin-bottom: var(--space-xs);
+}

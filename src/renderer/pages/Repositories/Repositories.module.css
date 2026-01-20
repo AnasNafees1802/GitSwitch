@@ -1,0 +1,201 @@
+/**
+ * Repositories Page Styles
+ */
+
+.repositories {
+    max-width: 1000px;
+    animation: slideUp var(--transition-normal);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.headerActions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md);
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid var(--accent-red);
+    border-radius: var(--radius-md);
+    color: var(--accent-red);
+    margin-bottom: var(--space-lg);
+}
+
+.error button {
+    background: none;
+    border: none;
+    color: var(--accent-red);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-2xl);
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.emptyState h3 {
+    color: var(--text-primary);
+}
+
+.repoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.repoCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: border-color var(--transition-fast);
+}
+
+.repoCard:hover {
+    border-color: var(--text-muted);
+}
+
+.repoCard.mismatch {
+    border-color: var(--accent-orange);
+}
+
+.repoHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+}
+
+.repoIcon {
+    font-size: 24px;
+}
+
+.repoStatus {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.repoBody {
+    margin-bottom: var(--space-md);
+}
+
+.repoName {
+    font-size: var(--font-md);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.repoPath {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    word-break: break-all;
+    margin-bottom: var(--space-sm);
+}
+
+.repoProvider {
+    display: inline-block;
+    font-size: var(--font-xs);
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.boundProfile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    margin-top: var(--space-sm);
+}
+
+.profileDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.localConfig {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+}
+
+.repoActions {
+    display: flex;
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-primary);
+}
+
+/* Bind Modal */
+.bindModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.bindContent {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    width: 100%;
+    max-width: 400px;
+}
+
+.bindContent h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.bindContent p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.bindContent select {
+    width: 100%;
+    margin-bottom: var(--space-lg);
+}
+
+.bindActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}

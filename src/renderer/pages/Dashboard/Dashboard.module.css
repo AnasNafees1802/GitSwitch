@@ -1,0 +1,365 @@
+/**
+ * Dashboard Styles
+ */
+
+.dashboard {
+    max-width: 1000px;
+    animation: slideUp var(--transition-normal);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.section {
+    margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-md);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.sectionDesc {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+}
+
+/* Help Section */
+.helpSection {
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.helpSection h3 {
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.helpGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.helpCard {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
+.helpIcon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.helpCard h4 {
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.helpCard p {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Message */
+.message {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+}
+
+.message.success {
+    background: rgba(35, 134, 54, 0.15);
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+}
+
+.message.error {
+    background: rgba(248, 81, 73, 0.15);
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+}
+
+/* Quick Switch Grid */
+.switchGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.switchCard {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+}
+
+.switchCard:hover:not(:disabled) {
+    border-color: var(--accent-blue);
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.switchCard.active {
+    border-color: var(--accent-green);
+    background: rgba(35, 134, 54, 0.1);
+}
+
+.switchCard:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.switchDot {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.switchInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.switchLabel {
+    display: block;
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.switchEmail {
+    display: block;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activeBadge {
+    background: var(--accent-green);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.switchSpinner {
+    animation: spin 1s linear infinite;
+    font-size: 20px;
+}
+
+/* Identity Card */
+.identityCard {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.identityHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+}
+
+.identityLabel {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.identityContent {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.identityAvatar {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: white;
+}
+
+.identityInfo {
+    flex: 1;
+}
+
+.identityName {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+}
+
+.identityEmail {
+    font-size: var(--font-md);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.identityProvider {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    color: var(--text-muted);
+}
+
+/* Stats Row */
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.statCard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.statCard.statWarning {
+    border-color: var(--accent-orange);
+}
+
+.statValue {
+    display: block;
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.statWarning .statValue {
+    color: var(--accent-orange);
+}
+
+.statLabel {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+}
+
+/* Quick Actions */
+.quickActions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* Repo List */
+.repoList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.repoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast);
+}
+
+.repoItem:hover {
+    border-color: var(--border-primary);
+    background: var(--bg-tertiary);
+}
+
+.repoInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    min-width: 0;
+}
+
+.repoName {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.repoPath {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.viewMore {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-size: var(--font-sm);
+    color: var(--text-link);
+}
+
+@media (max-width: 800px) {
+    .statsRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .helpGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

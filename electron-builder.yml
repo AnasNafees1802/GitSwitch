@@ -1,0 +1,61 @@
+appId: com.gitswitch.app
+productName: GitSwitch
+copyright: Copyright © 2024 GitSwitch
+
+directories:
+  output: release
+  buildResources: assets
+
+files:
+  - dist/**/*
+  - "!**/*.map"
+  - "!**/node_modules/.cache"
+
+# Windows Configuration
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.png
+  artifactName: GitSwitch-${version}-Setup.${ext}
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  menuCategory: Development
+  shortcutName: GitSwitch
+
+# macOS Configuration (for future)
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  icon: assets/icon.png
+  category: public.app-category.developer-tools
+
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
+# Linux Configuration (for future)
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  icon: assets/icon.png
+  category: Development
+  maintainer: GitSwitch Team
+
+# Auto-update (disabled for now)
+publish: null

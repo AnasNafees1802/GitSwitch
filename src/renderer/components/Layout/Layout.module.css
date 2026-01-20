@@ -1,0 +1,128 @@
+/**
+ * Layout Styles
+ */
+
+.layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    height: 100%;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-primary);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.logoIcon {
+    color: var(--accent-green);
+}
+
+.logoText {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    flex: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.navItem:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.navItem.active {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.navItem.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 20px;
+    background: var(--accent-green);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.currentProfile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-primary);
+    margin-top: auto;
+}
+
+.profileDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.profileLabel {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileEmail {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding: var(--space-xl);
+    background: var(--bg-primary);
+}
