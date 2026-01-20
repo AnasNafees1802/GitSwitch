@@ -161,4 +161,5 @@ MIT License - see [LICENSE](./LICENSE)
 ## Author
 
 Created by **Anas Nafees**  
-Email: [anasnafees1802@gmail.com](mailto:anasnafees1802@gmail.com)
+Email: [anasnafees1802@gmail.com](mailto:anasnafees1802@gmail.com)  
+YouTube: [SyntacticCode](https://www.youtube.com/@SyntacticCode)
